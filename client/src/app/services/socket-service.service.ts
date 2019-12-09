@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/internal/Observable';
+import * as io from 'socket.io-client';
 
 
 @Injectable({
@@ -18,16 +18,22 @@ export class SocketService {
     this.socket.emit(topic, message);
   }
 
+  event(topic) {
+    return new Observable(observer => {
+      this.socket.on(topic, data => observer.next(data));
+    });
+  }
+
   subscribe(event) {
     return new Observable(observer => {
       this.socket.on(event, data => observer.next(data));
-    });    
+    });
   }
 
   test(event) {
     return new Observable(observer => {
-      setInterval(() => observer.next('ETA LELE'), 1000);
-    });    
+      setInterval(() => observer.next('ETA LELE'), 5000);
+    });
   }
 
   unsubscribe() {
