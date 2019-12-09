@@ -1,0 +1,52 @@
+.smallscreen {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.smallscreen--theme-white {
+    background-color: #fafafa;
+    color: #050505;
+}
+
+.smallscreen--theme-black {
+    background: #050505;
+    color: #fafafa;
+}
+
+.smallscreen--theme-andon {
+    background: #ffdd55;
+    color: #050505;
+}
+
+.smallscreen--theme-stop-time {
+    background: #ff2222;
+    color: #fafafa;
+}
+
+.smallscreen--theme-stop-plan {
+    background: #ff2222;
+    color: #fafafa;
+}
+
+.smallscreen__takt {
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30vw;
+    border: 1px solid black;
+}
+
+.smallscreen__andon-message {
+    display: flex;
+}
+
+.smallscreen__clock {
+    display: flex;
+}

@@ -14,6 +14,8 @@ export class SmallComponent implements OnInit {
 
   constructor(private _socket: SocketService) {
     this._socket.event('takt').subscribe(this.updateData);
+    this.takt = new Takt();
+    this.takt.timeString = '00:00';
   }
 
   ngOnInit() {
