@@ -1,0 +1,49 @@
+<div class="bigscreen" 
+  [ngClass]="{
+    'bigscreen--theme-black' : theme
+  }"
+>
+
+  <div class="bigscreen_box bigscreen__stoptime">
+    <div class="bigscreen_box--title">STOP TIME</div>
+    <div class="bigscreen_box--value">{{ takt.stopTimeString }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__timer">
+    <div class="bigscreen_box--title">TIMER</div>
+    <div class="bigscreen_box--value">{{ takt.timeString }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__produced">
+    <div class="bigscreen_box--title"> PRODUZIDOS </div>
+    <div class="bigscreen_box--value"> {{ takt.produced }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__objective">
+    <div class="bigscreen_box--title"> OBJETIVO </div>
+    <div class="bigscreen_box--value">{{ takt.objective }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__directrun" *ngIf >
+    <div class="bigscreen_box--title">DR CHASSIS</div>
+    <div class="bigscreen_box--value">{{ takt.directrun }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__directrun-geral">
+    <div class="bigscreen_box--title">DR GERAL</div>
+    <div class="bigscreen_box--value">{{ takt.directRunGeral }}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__balance" *ngIf>
+    <div class="bigscreen_box--title">SALDO</div>
+    <div class="bigscreen_box--value">{{ takt.balance}}</div>
+  </div>
+
+  <div class="bigscreen_box bigscreen__accumulated" >
+    <div class="bigscreen_box--title">ACUMULADO</div>
+    <div class="bigscreen_box--value">{{ takt.accumulated }}</div>
+  </div>
+
+  <!-- <app-status-bar></app-status-bar> -->
+
+</div>

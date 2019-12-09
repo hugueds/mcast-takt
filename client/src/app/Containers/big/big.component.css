@@ -1,0 +1,39 @@
+.bigscreen {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.bigscreen--theme-white {
+  background: #FAFAFA;
+  color: #050505;
+}
+
+.bigscreen--theme-black {
+  background: #050505;
+  color: #FAFAFA;
+}
+
+.bigscreen_box {
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 49%;
+}
+
+.bigscreen_box--title {
+  display: flex;
+  align-self: center;
+  font-size: 3vh;
+}
+
+.bigscreen_box--value {
+  display: flex;
+  align-self: center;
+  font-size: 12vh;
+}
