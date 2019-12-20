@@ -11,7 +11,7 @@ export class SocketService {
   socket: SocketIOClient.Socket;
 
   constructor() {
-    // this.socket = io.connect();
+    this.socket = io.connect({ path: '/takt/socket.io' });
   }
 
   emit(topic, message) {

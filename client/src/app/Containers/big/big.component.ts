@@ -22,7 +22,7 @@ export class BigComponent implements OnInit {
 
   ngOnInit() {
     this.takt = new Takt();
-    this.takt.time = 1000 * 60 * 61;
+    this.takt.timer = 1000 * 60 * 61;
   }
 
   updateTheme(newTheme: string) {
@@ -35,15 +35,16 @@ export class BigComponent implements OnInit {
 
   updateData = (data) => {
 
-    console.log(this)
+    console.log(this);
+    this.takt.timer = data.timer;
+    this.takt.timeString = msToTimeString(this.takt.timer);
+    this.takt.produced = data.produced;
+    this.takt.stopTime = data.stopTime;
+    this.takt.balance = data.balance;
+    
+    this.takt.screenColor = data.screenColor;
+    this.takt.accumulated = data.accumulated;
 
-    this.takt.time -= 1000;
-    this.takt.timeString = msToTimeString(this.takt.time - 1000);
-
-    if (this.theme == 'bigscreen--theme-black')
-      this.theme = 'bigscreen--theme-white';
-    else
-      this.theme = 'bigscreen--theme-black';
 
   }
 

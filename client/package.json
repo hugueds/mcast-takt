@@ -1,5 +1,6 @@
 {
   "name": "mcast-takt",
+  "homepage": "http://10.8.66.143/takt/",
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
